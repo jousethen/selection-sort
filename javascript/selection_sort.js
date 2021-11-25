@@ -1,6 +1,21 @@
 function selectionSort(arr) {
-  // type your code here
+  for (let i = 1; i < arr.length; i++) {
+    let temp = 0;
+    let a = i;
+
+    while (a != 0) {
+      console.log(a)
+      if (arr[a] < arr[a - 1]) {
+        temp = arr[a - 1];
+        arr[a - 1] = arr[a];
+        arr[a] = temp;
+      }
+      a--;
+    }
+  }
+  return arr;
 }
+
 
 if (require.main === module) {
   // add your own tests in here
@@ -20,4 +35,9 @@ if (require.main === module) {
 module.exports = selectionSort;
 
 // Please add your pseudocode to this file
+
+
+
 // And a written explanation of your solution
+
+
